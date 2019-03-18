@@ -4,7 +4,7 @@
 #
 Name     : R-geojson
 Version  : 0.3.2
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/geojson_0.3.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/geojson_0.3.2.tar.gz
 Summary  : Classes for 'GeoJSON'
