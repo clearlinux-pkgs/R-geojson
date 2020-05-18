@@ -4,7 +4,7 @@
 #
 Name     : R-geojson
 Version  : 0.3.2
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/geojson_0.3.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/geojson_0.3.2.tar.gz
 Summary  : Classes for 'GeoJSON'
@@ -23,34 +23,33 @@ BuildRequires : R-magrittr
 BuildRequires : R-protolite
 BuildRequires : R-sp
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-geojson
-=======
-[![cran checks](https://cranchecks.info/badges/worst/geojson)](https://cranchecks.info/pkgs/geojson)
-[![Build Status](https://travis-ci.org/ropensci/geojson.svg?branch=master)](https://travis-ci.org/ropensci/geojson)
-[![codecov](https://codecov.io/gh/ropensci/geojson/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/geojson)
-[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/geojson)](https://github.com/metacran/cranlogs.app)
-[![cran version](https://www.r-pkg.org/badges/version/geojson)](https://cran.r-project.org/package=geojson)
+Includes S3 classes for 'GeoJSON' classes with brief summary output,
+    and a few methods such as extracting and adding bounding boxes,
+    properties, and coordinate reference systems; working with 
+    newline delimited 'GeoJSON'; linting through the 'geojsonlint' 
+    package; and serializing to/from 'Geobuf' binary 'GeoJSON' 
+    format.
 
 %prep
 %setup -q -c -n geojson
+cd %{_builddir}/geojson
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571836763
+export SOURCE_DATE_EPOCH=1589760283
 
 %install
-export SOURCE_DATE_EPOCH=1571836763
+export SOURCE_DATE_EPOCH=1589760283
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
